@@ -22,7 +22,7 @@ def main():
         last: int = 0 
         full: int = 0
 
-        """ Part 2, comment 30-32 for Part 1 answer
+        """ Part 2, comment 27-29 for Part 1 answer
         """
         for k,v in words_to_numbers.items():
             if k in line:
