@@ -1,17 +1,14 @@
-
 words_to_numbers = {
-    "one": 1,
-    "two": 2,
-    "three": 3,
-    "four": 4,
-    "five": 5,
-    "six": 6,
-    "seven": 7,
-    "eight": 8,
-    "nine": 9,
-    "zero": 9
+'one': 'on1ne',
+'two': 'tw2wo',
+'three': 'thr3ree',
+'four': 'fou4our',
+'five': 'fiv5ive',
+'six': 'si6ix',
+'seven': 'sev7ven',
+'eight': 'eig8ght',
+'nine': 'nin9ine'
 }
-
 
 def main():
     f = open("input.txt", "r")
@@ -27,36 +24,26 @@ def main():
 
         """ Part 2, comment 30-32 for Part 1 answer
         """
-        print(line)
         for k,v in words_to_numbers.items():
-
             if k in line:
-                print(k)
-                line = line.replace(k,str(v))
-        #print(line)
-        print(line)
-
+                line = line.replace(k,v)
 
         for char in line:
             if char.isnumeric():
                 digits.append(int(char))
 
         if len(digits) == 1:
-            full = int(str(digits[0]) + str(digits[0])) 
+            full = int(str(digits[0]) + str(digits[0]))
         else:
             first = str(digits[0])
             last = str(digits[-1])
-            full = int(first + last) 
-        print(digits)
-        print(full)
+            full = int(first + last)
 
-        print(answer, full)
         answer = answer + full
-        print()
-    f.close()
-
+        
     print(f'Answer: {answer}')
 
+    f.close()
 if __name__ == '__main__':
     main()
 
