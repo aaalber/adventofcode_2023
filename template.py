@@ -1,13 +1,11 @@
 
 
-
-
 def main():
     f = open("input.txt", "r")
-
-    pass
-
-
+    lines = [x.replace("\n", "") for x in f.readlines()]
+    
+    for line in lines:
+        pass
 
     f.close()
 
