@@ -1,4 +1,5 @@
 
+
 def main():
 
     with open("input.txt") as f:
@@ -9,8 +10,6 @@ def main():
 
     new_list_of_cards = []
     
-    winners = {}
-
     index = 0
 
     for card in all_cards:
@@ -37,8 +36,6 @@ def main():
                 else:
                     points += 1
         
-        winners[card] = num_winners
-        
         for x in range(num_winners):
             x += 1
 
@@ -49,9 +46,7 @@ def main():
                 new_list_of_cards.append(all_cards[index+x])
 
         total += points
-        
         index += 1
-
 
         # Part 1
         total_cards = total_cards + num_winners
